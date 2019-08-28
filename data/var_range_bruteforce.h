@@ -4,16 +4,13 @@ using namespace std;
 
 char* printArray(char* arr,int l,int pointer)
 {
-	char* string=(char*)malloc((l-pointer)*sizeof(char));
-	string=&arr[pointer];
+	char* string=(char*)malloc((pointer+1)*sizeof(char));
+	string=&arr[l-pointer];
 	int j=0;	
-	for(int i=pointer;i<l;i++)
-	{
-		string[j]=arr[i];
-		j++;
-	}
-	string[j]='\0';		
+	
+	string[pointer]='\0';		
 	return string;	
+
 }		
 
 int increment(char* arr,int l,int low, int high)	//returns the length of the current password
