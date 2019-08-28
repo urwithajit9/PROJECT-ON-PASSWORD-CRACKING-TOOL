@@ -4,15 +4,11 @@ using namespace std;
 
 char* printArray(char* arr,int l,int pointer)
 {
-	char* string=(char*)malloc((l-pointer)*sizeof(char));
-	string=&arr[pointer];
+	char* string=(char*)malloc((pointer+1)*sizeof(char));
+	string=&arr[l-pointer];
 	int j=0;	
-	for(int i=pointer;i<l;i++)
-	{
-		string[j]=arr[i];
-		j++;
-	}
-	string[j]='\0';		
+	
+	string[pointer]='\0';		
 	return string;	
 }		
 
@@ -29,7 +25,10 @@ int increment(char* arr,int l)	//returns the length of the current password
 		arr[i]=(char)97;
 	else
 		arr[i]=(char)(arr[i]+1);
-	length++;
+	while(arr[i]!=' ')
+	{	i--;
+		length++;
+	}
 	return length;	
 }			
 	
@@ -38,7 +37,7 @@ void gen(char* destination_buffer,int max_size)	//tries password by putting it i
 	char index[max_size];
 	for(int i=0;i<max_size;i++)
 		index[i]=' ';
-	cout<<"echo";
+	
 	for(int i=0;i<=26*26*26*26*26;i++)
 	{	int pointer=increment(index,max_size);
 		destination_buffer=printArray(index,max_size,pointer);
