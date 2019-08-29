@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#remove meaning of each names
 import os
 #print("hello")
 fin=open("/root/girl_names.txt","r");
