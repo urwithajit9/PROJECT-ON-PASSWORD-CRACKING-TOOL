@@ -14,7 +14,7 @@ The brute force solution makes you really understand the problem without worryin
 Our tool also provides the rainbow tables which are usually used for cracking password hashes. These tables are usually used in recovering a password up to certain length consisting of a limited set of characters.
 Our too provides one of the important feature of hashing which can be used to check file authenticity , to generate rainbow tables , etc. A hash value can be used to uniquely identify secret information. Hash functions are widely used in cryptography. 
 Our tool will get improve and provide you with more features which includes like more characters , advanced brute force attacks , more easy and efficient password cracking techniques , etc. 
-#######
+############################################################
 **DESCRIPTION OF FILES:
 DATA FOLDER CONSIST OF FILES-**
 1)Big_Character_Only.H-   To crack password consist of only capital alphabet
